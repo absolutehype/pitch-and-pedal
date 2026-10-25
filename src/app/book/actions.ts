@@ -44,7 +44,7 @@ export async function reserve(_prev: BookingState, formData: FormData): Promise<
   const values = { name, email, phone, pitch, notes };
   if (Object.keys(fieldErrors).length) return { fieldErrors, values };
 
-  let ref: string;
+  let token: string;
   try {
     const reservation = await createReservation({
       campsite,
@@ -58,11 +58,11 @@ export async function reserve(_prev: BookingState, formData: FormData): Promise<
       pitch,
       notes,
     });
-    ref = reservation.ref;
+    token = reservation.token;
   } catch (err) {
     if (err instanceof AvailabilityError) return { error: err.message, values };
     throw err;
   }
 
-  redirect(`/book/confirmation/${ref}`);
+  redirect(`/book/confirmation/${token}`);
 }

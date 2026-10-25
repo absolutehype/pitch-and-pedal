@@ -8,7 +8,8 @@ import { getBike, getCampsite } from "./data";
 import { nightsBetween } from "./dates";
 
 export type Reservation = {
-  ref: string;
+  ref: string; // short, human-readable; display only
+  token: string; // unguessable; the only key that unlocks the confirmation page
   campsite: string;
   bike: string;
   quantity: number;
@@ -59,15 +60,16 @@ export async function availableCount(campsite: string, bike: string, startDate: 
   return Math.max(0, total - (await bookedCount(campsite, bike, startDate, endDate)));
 }
 
-export async function getReservation(ref: string) {
+export async function getReservationByToken(token: string) {
+  if (token.length < 22) return null;
   const list = await readAll();
-  return list.find((r) => r.ref === ref.toUpperCase()) ?? null;
+  return list.find((r) => r.token === token) ?? null;
 }
 
 export class AvailabilityError extends Error {}
 
 export function createReservation(
-  input: Omit<Reservation, "ref" | "total" | "createdAt">,
+  input: Omit<Reservation, "ref" | "token" | "total" | "createdAt">,
 ): Promise<Reservation> {
   // Serialise writes so two simultaneous bookings can't both take the last bike.
   const run = queue.then(async () => {
@@ -88,6 +90,7 @@ export function createReservation(
     const reservation: Reservation = {
       ...input,
       ref: "PP-" + randomBytes(3).toString("hex").toUpperCase(),
+      token: randomBytes(16).toString("base64url"),
       total: days * bike.pricePerDay * input.quantity,
       createdAt: new Date().toISOString(),
     };

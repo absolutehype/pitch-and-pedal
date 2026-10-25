@@ -4,14 +4,14 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { getBike, getCampsite } from "@/lib/data";
 import { formatDate } from "@/lib/dates";
-import { getReservation } from "@/lib/reservations";
+import { getReservationByToken } from "@/lib/reservations";
 
 export const metadata: Metadata = {
   title: "Booking confirmed",
   robots: { index: false },
 };
 
-export default function ConfirmationPage({ params }: PageProps<"/book/confirmation/[ref]">) {
+export default function ConfirmationPage({ params }: PageProps<"/book/confirmation/[token]">) {
   return (
     <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6">
       <Suspense fallback={<div className="h-96 animate-pulse rounded-3xl bg-forest-900/5" />}>
@@ -21,8 +21,8 @@ export default function ConfirmationPage({ params }: PageProps<"/book/confirmati
   );
 }
 
-async function Confirmation({ params }: Pick<PageProps<"/book/confirmation/[ref]">, "params">) {
-  const reservation = await getReservation((await params).ref);
+async function Confirmation({ params }: Pick<PageProps<"/book/confirmation/[token]">, "params">) {
+  const reservation = await getReservationByToken((await params).token);
   if (!reservation) notFound();
   const campsite = getCampsite(reservation.campsite)!;
   const bike = getBike(reservation.bike)!;
@@ -34,7 +34,7 @@ async function Confirmation({ params }: Pick<PageProps<"/book/confirmation/[ref]
       </div>
       <h1 className="mt-6 font-display text-4xl font-semibold tracking-tight text-forest-950">You&apos;re booked in!</h1>
       <p className="mt-3 text-stone">
-        Thanks {reservation.name.split(" ")[0]}. We&apos;ll text {reservation.phone} when your bikes are on the
+        Thanks {reservation.name.split(" ")[0]}. We&apos;ll text your mobile ending {reservation.phone.replace(/\D/g, "").slice(-3)} when your bikes are on the
         way. Keep your booking reference handy.
       </p>
       <p className="mt-6 inline-block rounded-full bg-sand px-4 py-1.5 font-mono text-sm font-semibold text-forest-900">
