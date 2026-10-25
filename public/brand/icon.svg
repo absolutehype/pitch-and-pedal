@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 80 240 240">
+<circle cx="200" cy="200" r="120" fill="#2d5b3d"/>
+<g color="#f0e7cc" style="--logo-bg:#2d5b3d"><defs><clipPath id="pp-badge-clip"><circle cx="200" cy="200" r="101"/></clipPath></defs><circle cx="200" cy="200" r="112" fill="none" stroke="currentColor" stroke-width="7"/>
+<circle cx="200" cy="200" r="103" fill="none" stroke="currentColor" stroke-width="1.6"/><g clip-path="url(#pp-badge-clip)">
+<circle cx="236" cy="140" r="14" fill="currentColor"/>
+<path d="M216 140L199 140M216.5 135.55L206.75 133.32M217.98 131.32L202.66 123.95M220.36 127.53L212.55 121.3M223.53 124.36L212.93 111.07M227.32 121.98L222.98 112.97M231.55 120.5L227.77 103.93M236 120L236 110M240.45 120.5L244.23 103.93M244.68 121.98L249.02 112.97M248.47 124.36L259.07 111.07M251.64 127.53L259.45 121.3M254.02 131.32L269.34 123.95M255.5 135.55L265.25 133.32M256 140L273 140" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+<path d="M156 226 L198 164 L216 184 L240 152 L292 226 Z" fill="currentColor"/>
+<path d="M188 180 L193 186 L199 179 L205 187 L209 181 M229 168 L234 175 L240 167 L246 176 L252 168" fill="none" style="stroke:var(--logo-bg, #2d5b3d)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90 236 Q160 220 220 232 T310 226 V310 H90Z" style="fill:var(--logo-bg, #2d5b3d)"/>
+<path d="M90 236 Q160 220 220 232 T310 226" fill="none" stroke="currentColor" stroke-width="3"/>
+<path d="M116 202L123.7 225.33L108.3 225.33ZM116 215.33L126.85 238.67L105.15 238.67ZM116 228.67L130 252L102 252ZM114.4 244h3.2v14h-3.2ZM134 210L140.05 227.5L127.95 227.5ZM134 220L142.53 237.5L125.48 237.5ZM134 230L145 247.5L123 247.5ZM132.4 241.5h3.2v10.5h-3.2ZM278 210L283.5 225.83L272.5 225.83ZM278 219.05L285.75 234.88L270.25 234.88ZM278 228.1L288 243.93L268 243.93ZM276.4 238.5h3.2v9.5h-3.2ZM294 202L301.7 224.5L286.3 224.5ZM294 214.86L304.85 237.36L283.15 237.36ZM294 227.71L308 250.21L280 250.21ZM292.4 242.5h3.2v13.5h-3.2Z" fill="currentColor"/>
+<path d="M126 150 q5 -6 10 0 q5 -6 10 0 M140 132 q4 -5 8 0 q4 -5 8 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M164 160 c-7 -5 4 -10 -1 -15 c-4 -4 3 -8 0 -12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M128 258 L166 172 L206 258 Z" fill="currentColor" style="stroke:var(--logo-bg, #2d5b3d)" stroke-width="6" stroke-linejoin="round" paint-order="stroke"/>
+<path d="M166 212 L152 258 H180 Z" style="fill:var(--logo-bg, #2d5b3d)"/>
+<path d="M138 236 H157 M175 236 H195 M133 247 H154 M178 247 H200" fill="none" style="stroke:var(--logo-bg, #2d5b3d)" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M158 162 L176 190 M174 162 L156 190" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+<path d="M96 258 H304" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<path d="M114 270 l3 -8 l3 8 M124 274 l2 -6 l2 6 M276 270 l3 -8 l3 8 M288 266 l2 -6 l2 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M164 304 C172 286 214 284 204 272 C200 266 214 262 224 260 L240 260 C230 266 226 270 234 276 C250 292 214 292 222 304 Z" fill="currentColor"/>
+<g style="fill:var(--logo-bg, #2d5b3d)">
+  <ellipse cx="184" cy="292" rx="4" ry="1.8"/><ellipse cx="204" cy="290" rx="3.6" ry="1.7"/><ellipse cx="196" cy="299" rx="3.6" ry="1.6"/>
+  <ellipse cx="216" cy="280" rx="3" ry="1.4"/><ellipse cx="222" cy="270" rx="2.4" ry="1.1"/><ellipse cx="232" cy="263" rx="2.2" ry="1"/>
+</g>
+<g fill="none" style="stroke:var(--logo-bg, #2d5b3d)" stroke-linecap="round" stroke-linejoin="round" stroke-width="9">
+  <circle cx="226" cy="243" r="14"/><circle cx="270" cy="243" r="14"/>
+  <path d="M226 243 L247 243 L240 223 Z M247 243 L263 225 L270 243 M240 223 L263 225 M233 219 H247 M263 225 L261 216 H271"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.2">
+  <circle cx="226" cy="243" r="14"/><circle cx="270" cy="243" r="14"/>
+  <path d="M226 243 L247 243 L240 223 Z M247 243 L263 225 L270 243 M240 223 L263 225 M233 219 H247 M263 225 L261 216 H271"/>
+</g>
+<circle cx="247" cy="243" r="2.6" fill="currentColor"/></g></g>
+</svg>
